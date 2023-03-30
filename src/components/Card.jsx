@@ -2,7 +2,9 @@ import React from 'react';
 
 const Card = (props) => {
     const { name, picture, price, job, age, about } = props.data;
-    const handleBuyPlayer = (id) => {};
+    const handleBuyPlayer = (id) => {
+        props.handleBuyPlayer(id);
+    };
     return (
         <div hidden className="card  card-compact w-96 bg-base-100 shadow-xl">
             <div className="w-full h-2/4">
