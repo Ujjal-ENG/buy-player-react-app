@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <header className="container-fluid mx-auto">
+        <header className="container-fluid mx-auto fixed top-0 right-0 left-0 z-50">
             <nav className="navbar bg-base-100 shadow-2xl border-b-2 border-black">
                 <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-xl">daisyUI</a>

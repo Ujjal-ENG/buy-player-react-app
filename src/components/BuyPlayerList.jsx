@@ -2,7 +2,7 @@ import React from 'react';
 
 const BuyPlayerList = () => {
     return (
-        <div className="my-10">
+        <div className="mt-10 fixed">
             <h1 className="text-3xl font-bold underline text-center">Player List</h1>
 
             <div className="flex flex-wrap justify-between items-center py-3">

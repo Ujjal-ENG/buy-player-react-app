@@ -17,7 +17,7 @@ const PlayerCards = (props) => {
     };
 
     return (
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 mt-20">
             <div className="col-span-10 gap-6 m-10 grid grid-cols-3">
                 {playerData &&
                     playerData.map((pl) => {
