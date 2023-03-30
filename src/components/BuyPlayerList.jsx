@@ -1,9 +1,14 @@
 import React from 'react';
 
 const BuyPlayerList = (props) => {
+    const sum = props.list.map((el) => el.price).reduce((ps, cs) => ps + cs, 0);
+    const clearCart = () => {
+        props.updateList([]);
+    };
     return (
         <div className="mt-10 fixed">
             <h1 className="text-3xl font-bold underline text-center">Player List</h1>
+            <h3 className="text-xl font-bold underline text-center">Total Price:{sum}</h3>
             {props.list.map((el) => {
                 return (
                     <>
@@ -23,7 +28,9 @@ const BuyPlayerList = (props) => {
                 );
             })}
 
-            <button className="btn btn-error w-full my-5">Clear Cart</button>
+            <button className="btn btn-error w-full my-5" onClick={clearCart}>
+                Clear Cart
+            </button>
             <button className="btn btn-warning w-full">Review Cart</button>
         </div>
     );

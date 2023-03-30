@@ -22,6 +22,9 @@ const PlayerCards = (props) => {
         setList([...list, filterPlayer]);
     };
 
+    const updateList = (newList) => {
+        setList(newList);
+    };
     return (
         <div className="grid grid-cols-12 mt-20">
             <div className="col-span-10 gap-6 m-10 grid grid-cols-3">
@@ -31,7 +34,7 @@ const PlayerCards = (props) => {
                     })}
             </div>
             <div className="col-span-2">
-                <BuyPlayerList list={list} />
+                <BuyPlayerList list={list} updateList={updateList} />
             </div>
         </div>
     );
