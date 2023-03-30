@@ -5,7 +5,7 @@ const BuyPlayerList = () => {
         <div className="mt-10 fixed">
             <h1 className="text-3xl font-bold underline text-center">Player List</h1>
 
-            <div className="flex flex-wrap justify-between items-center py-3">
+            <div className="flex flex-wrap justify-between items-center py-3 gap-2">
                 {/* player avatar */}
                 <div class="avatar">
                     <div class="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
