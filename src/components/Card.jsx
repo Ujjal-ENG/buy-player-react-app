@@ -1,21 +1,29 @@
 import React from 'react';
 
-const Card = () => {
+const Card = (props) => {
+    const { name, picture, price, job, age, about } = props.data;
+    const handleBuyPlayer = (id) => {};
     return (
-        <div class="card card-side bg-base-100 shadow-xl">
-            <div class="w-1/3 h-2/4">
-                <img src="./images/bike-1.png" class="w-full h-full" alt="" />
+        <div hidden className="card  card-compact w-96 bg-base-100 shadow-xl">
+            <div className="w-full h-2/4">
+                <img src={picture} className="w-full h-full rounded-md" alt="" />
             </div>
-            <div class="card-body w-[67%] h-2/5">
-                <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dolore.</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime iure eius minima. Hic exercitationem dolor voluptatibus tempora laborum doloremque esse error optio voluptas
-                    repellat facere minus? Culpa minima similique minus consectetur ipsum odit voluptatem ab et eos, eveniet, provident quia optio velit accusantium doloremque deserunt fugit totam
-                    quidem quas molestias dolor tempore. Incidunt illum in, suscipit explicabo distinctio dolor perferendis pariatur debitis eaque provident obcaecati expedita quod voluptate quos,
-                    laborum cum inventore totam repudiandae. Commodi, officia voluptas.
-                </p>
-                <div class="card-actions justify-end h-[10%]">
-                    <button class="btn btn-primary">Buy Now</button>
+            <div className="card-body h-2/5">
+                <h2 className="card-title">{name}</h2>
+                <p>{about}</p>
+                <div className="flex items-center justify-between">
+                    <p>
+                        Price: <span className="font-bold text-red-500">{price}</span>
+                    </p>
+                    <p>
+                        Job: <span className="font-bold text-orange-500">{job}</span>
+                    </p>
+                    <p>Age: {age}</p>
+                </div>
+                <div className="card-actions justify-end">
+                    <button className="btn btn-primary" onClick={() => handleBuyPlayer(props.data.id)}>
+                        Buy Now
+                    </button>
                 </div>
             </div>
         </div>
